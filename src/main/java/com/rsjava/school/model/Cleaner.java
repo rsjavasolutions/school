@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Data
-public class Cleaner {
+public class Cleaner extends EntityBase {
 
     @NonNull
     @Column(name = "name")
