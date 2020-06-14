@@ -1,6 +1,5 @@
 package com.rsjava.school.model;
 
-import com.sun.istack.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -10,21 +9,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Table(name = "students")
 @Entity
+@Table(name = "backpacks")
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
-public class Student extends EntityBase {
+public class Backpack extends EntityBase {
 
     @NonNull
-    @Column(name = "name")
-    private String name;
-    @NonNull
-    @Column(name = "surname")
-    private String surname;
-    @NonNull
-    @Column(name = "group_number")
-    private String groupNumber;
+    @Column(name = "mark")
+    private String mark;
 
 }
