@@ -5,9 +5,9 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "notepads")
@@ -19,5 +19,7 @@ public class Notepad extends EntityBase {
     @NonNull
     @Column(name = "title")
     private String title;
+    @OneToMany(mappedBy = "notepad", cascade = CascadeType.ALL)
+    private Set<Note> noteSet = new HashSet<>();
 
 }
